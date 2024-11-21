@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docker Volume Test</title>
+  </head>
+  <body>
+    <h1>Docker Volume Test</h1>
+    <form method="POST" action="/">
+      <input
+        type="text"
+        name="user_input"
+        placeholder="저장할 내용을 입력하세요"
+        required
+      />
+      <button type="submit">저장</button>
+    </form>
+    <h2>저장된 내용:</h2>
+    <ul>
+      {% for line in contents %}
+      <li>{{ line.strip() }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
